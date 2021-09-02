@@ -1,4 +1,4 @@
-// Toggole Spinner For clickinf on button
+// Toggole Spinner For clicking on button
 const spinner = (style, isHide) => {
    const spin = document.getElementById('spinner');
    if (isHide) {
@@ -20,7 +20,7 @@ const displayContainer = isHide => {
 // Search Book when click on the search btn with API
 const searchBook = () => {
    const searchText = document.getElementById('search-field').value;
-   const url = `http://openlibrary.org/search.json?q=${searchText}`;
+   const url = `https://openlibrary.org/search.json?q=${searchText}`;
    if (searchText === '') {
       document.getElementById('messege').innerText = 'Please Insert a Book Name';
       displayContainer(true);
@@ -40,7 +40,7 @@ const searchBook = () => {
 const displayBook = data => {
    console.log(data)
    if (data.length === 0) {
-      document.getElementById('messege').innerText = 'Please search with a Valid Book Name';
+      document.getElementById('messege').innerText = 'No Result Found';
       spinner('visually-hidden', false)
    }
    else {
