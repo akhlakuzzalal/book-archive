@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Book</title>
+
+   <!-- bootstrap CSS Link -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+   <style>
+      /* #spinner {
+         display: none !important;
+      } */
+   </style>
+</head>
+
+<body>
+   <!-- Input Field -->
+   <h1 class="text-center text-success my-4">Welcome to Book Collection</h1>
+   <div class="w-50 mx-auto d-flex">
+      <input id="search-field" class="form-control" type="text" placeholder="Search A Book Name">
+      <button onclick="searchBook()" class="btn btn-warning text-white">Search</button>
+   </div>
+   <h3 id="messege" class="text-center mt-3"></h3>
+
+   <!-- Spinner -->
+   <div id="spinner" class="visually-hidden d-flex justify-content-center align-items-center mt-4">
+      <div class="spinner-border d-flex justify-content-center" style="width: 4rem; height: 4rem;" role="status">
+         <span class="visually-hidden">Loading...</span>
+      </div>
+   </div>
+
+   <!-- Book Container -->
+   <div id="book-container" class="row row-cols-1 row-cols-md-3 g-4 mx-5 mt-3"></div>
+
+   <!-- Java script From Bootstrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"></script>
+   <!-- basic Java Link -->
+   <script src="js/book.js"></script>
+</body>
+
+</html>
